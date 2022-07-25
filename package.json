@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Bihanskiy.github.io/landing-furniture-js",
   "name": "gulp-2022-forwin7",
   "version": "1.0.0",
   "description": "",
@@ -8,7 +9,8 @@
     "dev": "gulp",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
-    "deploy": "gulp deployFTP --build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "svgSprive": "gulp svgSpriteTask"
   },
   "author": "FLS",
@@ -48,6 +50,7 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "lightgallery": "^2.4.0",
     "lightgallery.js": "^1.4.0"
   }
